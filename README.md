@@ -5,6 +5,7 @@ VR, AR, MR and XR
 - Augmented Reality (AR)
 - Mixed Reality (MR)
 - Extended Reality (XR)
+
 ![ARVRARXR Chart](https://public-images.interaction-design.org/literature/articles/materials/eaQHlQZ4QtFIziVq1SJHdgjfNORXryzkp3dpFIo3.jpg)
 
 Reality-Virtuality(RV) Continuum
@@ -94,6 +95,7 @@ Types of Qustionnaires
 - SSQ: Simulator Sickness Questionnaire
 - CSQ: Cybersickness Questionnaire
 - VRSQ: Virtual Reality Sickness Questionnaire
+
 ![QuestionaireDiff](questionaireInfo.png)
 
 ### Questions
@@ -209,9 +211,11 @@ What is the main affordance on a haptic glove for an experienced VR user?
 ## Week 3
 
 Engines info
+
 ![imageOfStandards](engineInfo.png)
 
 Standards
+
 ![imageOfStandards](softwareDiffs.png)
 
 ### Questions
@@ -451,7 +455,8 @@ What is your top reason for using ECS over straightforward OOP in your game app 
 ## IPA 1 Stuff
 
 Note: Remember to import libraries for the items
-Example: 
+Example:
+
 ![importing](import.png)
 
 **Creating scene**
