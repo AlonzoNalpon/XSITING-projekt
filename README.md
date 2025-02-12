@@ -208,6 +208,11 @@ What is the main affordance on a haptic glove for an experienced VR user?
 
 ## Week 3
 
+Engines info
+![imageOfStandards](engineInfo.png)
+
+Standards
+![imageOfStandards](softwareDiffs.png)
 
 ### Questions
 When I run console.log("debug"), where can I see this "debug" message?
@@ -301,7 +306,33 @@ WebXR is only meant for building desktop 3D web application
 After running 'npm install', a file will be auto updated in proj directory. What file is that?
 - package-lock.json
 
-5: Coding question, 'app.createScene().then' is undefined
+5: 
+```js
+import { Engine, Scene } from "@babylonjs/core";
+class App 
+{
+    private engine: Engine;
+    constructor(engine: Engine) {this.engine = engine;}
+    createScene() 
+    {
+        const scene = new Scene(this.engine);
+        scene.createDefaultCamera(true, true, true);
+        scene.createDefaultLight(true);
+        return scene;
+    }
+}
+
+const canvas = <HTMLCanvasElement>document.getElementById('renderCanvas');
+const engine = new Engine(canvas, true);
+const app = new App(engine);
+app.createScene().then(scene => {
+        engine.runRenderLoop(() => {
+            scene.render();
+        })
+    });
+```
+
+'app.createScene().then' is undefined
 - Missing keyword = async
 
 6: Want to deploy Babylon.js application to a web server, what to run in terminal to reploy?
@@ -338,12 +369,15 @@ After running 'npm install', a file will be auto updated in proj directory. What
 - Did not connect a USB data cable from PC to headset
 - Did not enable Developer Mode on Meta Horizon app on phone :heavy_check_mark:
 
-11: What does the following Babylon.js snippet accomplish\
+11: What does the following Babylon.js snippet accomplish
+```js
 const xr = await scene.createDefaultXRExperienceAsync({
     uiOptions:{
         sessionMode: "immersice-vr",
-    },
-});
+        },
+    });
+```
+
 - Creates a default BabylonJS scene with a sphere and plane, and then initializes typical components for VR experiences.
 - Initializes typical components for hybrid XR (Ar & VR) exp
 - Makes a non-blocking method call to initialize typical components for VR experiences. :heavy_check_mark:
@@ -412,3 +446,71 @@ What is your top reason for using ECS over straightforward OOP in your game app 
 - Features in each entity need to constantly share info
 - Diff virtual entities have vastly diff features
 - All virtual objs can be constructed when the app starts
+
+
+## IPA 1 Stuff
+
+Note: Remember to import libraries for the items
+Example: 
+![importing](import.png)
+
+**Creating scene**
+```js
+const scene = new Scene(this.engine);
+```
+
+**Creating camera**
+- Link: https://doc.babylonjs.com/features/featuresDeepDive/cameras
+- Types of camera
+  - Universal Camera 
+    - FPS Cam
+  - Arc Rotate Camera 
+    - Orbitting cam that always point to target position
+  - Follow Camera
+    - Takes a mesh as target and follows it as it moves
+  - Anaglyph Camera
+    - Universal + Arc Rotate for use with Red & Cyan 3D glasses
+  - Device Orientation Camera
+    - React to device being tilted forward, backward, left or right
+  - Virtual Joysticks Camera
+    - On Screen 2D graphics to control camera or other scene items
+  - Virtual Reality camera
+    - Range of camera for VR devices
+- Code
+```js
+const camera = new UniversalCamera("MainCamera", new Vector3(0,0,0), scene);
+```
+
+**Creating lights**
+- Link: https://doc.babylonjs.com/features/featuresDeepDive/lights
+- Types of Lights
+  - Point light
+  - Directional light
+  - Spot light
+  - Hemispheric light (Ambient light)
+  - Rectangular area light (LED Panel)
+- Code
+```js
+const light = new DirectionalLight("MainSceneLight", new Vector3(0, 100, 0), scene);
+```
+
+**Creating meshes**
+- Link: https://doc.babylonjs.com/features/featuresDeepDive/mesh/creation/
+- Code
+```js
+const mesh = MeshBuilder.CreateBox("BoxMesh", {size: 5}, scene);
+```
+
+**Functions & Debug text**
+- Code:
+```js
+export function createHelloMessage(_inputStr: string)
+{
+    return `Hello, ${_inputStr}!`;
+}
+
+export function sayHello(_inputStr:string)
+{
+    console.log(createHelloMessage(_inputStr));
+}
+```
