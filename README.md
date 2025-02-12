@@ -476,7 +476,6 @@ const scene = new Scene(this.engine);
     - On Screen 2D graphics to control camera or other scene items
   - Virtual Reality camera
     - Range of camera for VR devices
-- Code
 ```js
 const camera = new UniversalCamera("MainCamera", new Vector3(0,0,0), scene);
 ```
@@ -489,20 +488,17 @@ const camera = new UniversalCamera("MainCamera", new Vector3(0,0,0), scene);
   - Spot light
   - Hemispheric light (Ambient light)
   - Rectangular area light (LED Panel)
-- Code
 ```js
 const light = new DirectionalLight("MainSceneLight", new Vector3(0, 100, 0), scene);
 ```
 
 **Creating meshes**
 - Link: https://doc.babylonjs.com/features/featuresDeepDive/mesh/creation/
-- Code
 ```js
 const mesh = MeshBuilder.CreateBox("BoxMesh", {size: 5}, scene);
 ```
 
 **Functions & Debug text**
-- Code:
 ```js
 export function createHelloMessage(_inputStr: string)
 {
