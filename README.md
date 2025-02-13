@@ -406,27 +406,26 @@ Image for next 2 questions below
 ![HmdDiagram](image.png)
 
 a: The virtual image plane distance – this is the distance from the lenses to the perceived virtual image, typically far away for optical comfort.
-
 Increasing: The virtual image appears farther away, which can reduce eye strain but might make close objects harder to focus on.
 Decreasing: The virtual image appears closer, making it easier to focus on near objects but potentially causing more eye strain or discomfort for distant viewing.
-b: The display height – the vertical size of the physical display inside the HMD.
 
+b: The display height – the vertical size of the physical display inside the HMD.
 Increasing: A larger display height allows for a taller field of view, improving immersion, but may require higher resolution to avoid pixelation.
 Decreasing: A smaller display height reduces the field of view, which can make the experience feel less immersive but requires fewer pixels for a clear image.
-c: The focal length of the lens – the distance from the lens where light rays converge or diverge to focus.
 
+c: The focal length of the lens – the distance from the lens where light rays converge or diverge to focus.
 Increasing: A longer focal length increases the perceived distance of the virtual image, which can feel more natural for distant objects but may reduce the field of view.
 Decreasing: A shorter focal length brings the virtual image closer, potentially increasing the field of view but making it harder to focus on distant objects.
-d: The distance between the display and the lens – the physical separation in the HMD between the display and the lenses.
 
+d: The distance between the display and the lens – the physical separation in the HMD between the display and the lenses.
 Increasing: The virtual image will appear farther away and larger, but it may lead to distortions if the lenses are not designed for this distance.
 Decreasing: The virtual image will appear closer and smaller, but distortion and lens mismatches may also become more noticeable.
-e: The interpupillary distance (IPD) – the horizontal distance between the centers of the right and left eyes, critical for stereoscopic viewing.
 
+e: The interpupillary distance (IPD) – the horizontal distance between the centers of the right and left eyes, critical for stereoscopic viewing.
 Increasing: If the IPD is too wide compared to the user's eyes, it can cause double vision or discomfort.
 Decreasing: If the IPD is too narrow compared to the user's eyes, it can also cause double vision or discomfort. Matching the user's IPD is essential for a clear and comfortable 3D experience.
-f: The total distance to the virtual image – the combined distance from the lens to the perceived virtual image along the optical path.
 
+f: The total distance to the virtual image – the combined distance from the lens to the perceived virtual image along the optical path.
 Increasing: The virtual image appears farther away, reducing eye strain for distance vision but possibly making close objects harder to see clearly.
 Decreasing: The virtual image appears closer, making it easier to focus on near objects but increasing the likelihood of eye strain or discomfort for distant objects.
 
